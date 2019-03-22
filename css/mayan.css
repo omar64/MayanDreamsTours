@@ -1,0 +1,157 @@
+/* Make the image fully responsive */
+  .carousel-inner img {
+      width: 100%;
+      height: 100%;
+  }
+  .titulo
+  {
+  	color: green;
+  	margin-left: 35%;
+  }
+
+ .footer {
+   position: relative;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   background-color: #DC3545;
+   color: white;
+   /*text-align: center;*/
+}
+
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  width: 30%;
+  margin: 5px;
+}
+
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+/*.cont {
+	background: green;
+    padding: 2px 16px;
+    color: white;
+}*/
+.info
+{
+	margin: 5px;
+}
+
+.logof img
+{
+	margin-top: -300px;
+	position: relative;
+	margin-left: 70%;
+	height: 200px;
+	width: 190px;
+}
+.tour img
+{
+	box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  width: 30%;
+  margin: 5px;
+}
+
+
+
+/*#mySidenav a {
+  position: absolute;
+  left: -80px;
+  transition: 0.3s;
+  padding: 15px;
+  width: 100px;
+  text-decoration: none;
+  font-size: 20px;
+  color: white;
+  border-radius: 0 5px 5px 0;
+}
+
+#mySidenav a:hover {
+  left: 0;
+}
+
+#about {
+  top: 20px;
+  background-color: #4CAF50;
+}
+
+#blog {
+  top: 80px;
+  background-color: #2196F3;
+}
+
+#projects {
+  top: 140px;
+  background-color: #f44336;
+}
+
+#contact {
+  top: 200px;
+  background-color: #555
+}*/
+
+.image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: #008CBA;
+}
+
+.card:hover .overlay {
+  opacity: 0.9;
+
+}
+
+.text {
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+
+
+.asistencia
+{
+  /*box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);*/
+  /*transition: 0.3s;*/
+  text-align: center;
+  padding: 20px;
+  padding-bottom: 15px;
+}
+.icon-container
+{
+   background-color: #FF741A;
+   font-size: 66px;
+   color: white;
+   height: 140px;
+   width: 140px;
+   line-height: 140px;
+   border-radius: 50%
+   margin: auto;   
+   margin-bottom: 13px;
+   display: inline-block;
+   position: relative;
+}
