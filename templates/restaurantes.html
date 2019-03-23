@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Restaurantes</title>
+	<link rel="stylesheet" href="../css/bootstrap.min.css">
+	<link rel="stylesheet" href="../css/Restaurantes.css">
+
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/popper.min.js"></script>
+	<script src="../js/bootstrap.min.js"></script>
+	
+</head>
+<body>
+<!--############################# TopNAV ###########################-->
+<div class="topnav">
+	<div class="nav-img">
+		<a href="index.html">
+			<img src="../logos/WhiteLogo1.png" alt="" style="width: 180px; height: 60px;">
+		</a>	
+	</div>
+	
+	<div class="nav-cont">
+		<a href="javascript:void(0)">Home</a>
+		<a href="javascript:void(0)">News</a>
+		<a href="javascript:void(0)">Contact</a>
+		<a href="javascript:void(0)">About</a>
+	</div>
+</div>
+<!--############################# TopNAV ###########################-->
+
+
+<div class="jumbotron text-center" style="background-image: url(../img/paradise-club-cancun1.jpg); height: 400px;">
+	
+	<div class="bg-text">Restaurantes</div>
+	
+	
+</div>
+
+
+	<!-- MAIN (Center website) -->
+	<div class="main">
+
+	<hr>
+
+	<h2>Restaurantes</h2>
+
+	<div id="myBtnContainer">
+	  <button class="btn active" onclick="filterSelection('all')"> Show all</button>
+	  <button class="btn" onclick="filterSelection('nature')"> Buffet</button>
+	  <button class="btn" onclick="filterSelection('cars')"> Familiar</button>
+	  <button class="btn" onclick="filterSelection('people')"> Bars</button>
+	</div>
+
+	<!-- Portfolio Gallery Grid -->
+	<div class="row">
+	  <div class="column nature">
+	    <div class="content">
+	      <img src="../img/chulavista-3.jpg" alt="Mountains" style="width:100%">
+	      <h4>Mountains</h4>
+	      <p>Lorem ipsum dolor..</p>
+	    </div>
+	  </div>
+	  <div class="column nature">
+	    <div class="content">
+	    <img src="../img/bar-jardin-corona.jpg" alt="Lights" style="width:100%">
+	      <h4>Lights</h4>
+	      <p>Lorem ipsum dolor..</p>
+	    </div>
+	  </div>
+	  <div class="column nature">
+	    <div class="content">
+	    <img src="../img/cocina-pueblo.jpg" alt="Nature" style="width:100%">
+	      <h4>Forest</h4>
+	      <p>Lorem ipsum dolor..</p>
+	    </div>
+	  </div>
+	  
+	  <div class="column cars">
+	    <div class="content">
+	      <img src="../img/restaurantes-xcaret-01.jpg" alt="Car" style="width:100%">
+	      <h4>Retro</h4>
+	      <p>Lorem ipsum dolor..</p>
+	    </div>
+	  </div>
+	  <div class="column cars">
+	    <div class="content">
+	    <img src="../img/chulavista.jpg" alt="Car" style="width:100%">
+	      <h4>Fast</h4>
+	      <p>Lorem ipsum dolor..</p>
+	    </div>
+	  </div>
+	  <div class="column cars">
+	    <div class="content">
+	    <img src="../img/la-terraza.jpg" alt="Car" style="width:100%">
+	      <h4>Classic</h4>
+	      <p>Lorem ipsum dolor..</p>
+	    </div>
+	  </div>
+
+	  <div class="column people">
+	    <div class="content">
+	      <img src="../img/bar-pueblo.jpg" alt="Car" style="width:100%">
+	      <h4>Girl</h4>
+	      <p>Lorem ipsum dolor..</p>
+	    </div>
+	  </div>
+	  <div class="column people">
+	    <div class="content">
+	    <img src="../img/jardin-corona.jpg" alt="Car" style="width:100%">
+	      <h4>Man</h4>
+	      <p>Lorem ipsum dolor..</p>
+	    </div>
+	  </div>
+	  <div class="column people">
+	    <div class="content">
+	    <img src="../img/chulavista-2.jpg" alt="Car" style="width:100%">
+	      <h4>Woman</h4>
+	      <p>Lorem ipsum dolor..</p>
+	    </div>
+	  </div>
+	<!-- END GRID -->
+	</div>
+
+	<!-- END MAIN -->
+	</div>
+
+	<script>
+	filterSelection("all")
+	function filterSelection(c) {
+	  var x, i;
+	  x = document.getElementsByClassName("column");
+	  if (c == "all") c = "";
+	  for (i = 0; i < x.length; i++) {
+	    w3RemoveClass(x[i], "show");
+	    if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+	  }
+	}
+
+	function w3AddClass(element, name) {
+	  var i, arr1, arr2;
+	  arr1 = element.className.split(" ");
+	  arr2 = name.split(" ");
+	  for (i = 0; i < arr2.length; i++) {
+	    if (arr1.indexOf(arr2[i]) == -1) {element.className += " " + arr2[i];}
+	  }
+	}
+
+	function w3RemoveClass(element, name) {
+	  var i, arr1, arr2;
+	  arr1 = element.className.split(" ");
+	  arr2 = name.split(" ");
+	  for (i = 0; i < arr2.length; i++) {
+	    while (arr1.indexOf(arr2[i]) > -1) {
+	      arr1.splice(arr1.indexOf(arr2[i]), 1);     
+	    }
+	  }
+	  element.className = arr1.join(" ");
+	}
+
+
+	// Add active class to the current button (highlight it)
+	var btnContainer = document.getElementById("myBtnContainer");
+	var btns = btnContainer.getElementsByClassName("btn");
+	for (var i = 0; i < btns.length; i++) {
+	  btns[i].addEventListener("click", function(){
+	    var current = document.getElementsByClassName("active");
+	    current[0].className = current[0].className.replace(" active", "");
+	    this.className += " active";
+	  });
+	}
+
+	window.onscroll = function() {myFunction()};
+
+	var navbar = document.getElementById("navbar");
+	var sticky = navbar.offsetTop;
+
+	function myFunction() {
+	  if (window.pageYOffset >= sticky) {
+	    navbar.classList.add("sticky")
+	  } else {
+	    navbar.classList.remove("sticky");
+	  }
+	}
+
+
+
+	</script>
+
+</body>
+<div class="jumbotron text-center" style="margin-bottom:0; background-color: #00AAA6;">
+	<h1 style="text-align: center; color: white;">MayanDreamsTours</h1>
+
+	<h3 style="color: yellow; margin: 5px;">Atencion al Cliente/Ventas:</h3>
+	<p style="margin: 5px;">Lunes a viernes de 7:00 a.m. a 12:00 a.m. | Sábados y domingos de 7:00 a.m. a 10:00 p.m. Hora local</p>
+	<br>
+	<div class="info">
+		<h3 style="color: yellow; margin: 5px;">Telefonos de Contacto:</h3>
+		<p>Cancun: 99884122</p>
+		<p>Playa del Carmen: 9988223</p>
+		<p>Tulum: 989388383</p>	
+	</div>
+	<div class="logof">
+		<img src="../logos/Logo4.png" alt="">
+	</div>
+	<p style="margin: 5px;">© 2019 MayanDreamsTours. Todos los derechos reservados</p>
+
+</div>
+</html>
